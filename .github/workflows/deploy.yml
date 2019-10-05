@@ -10,8 +10,7 @@ jobs:
     - uses: actions/checkout@v1
     - uses: docker://docker.pkg.github.com/dtinth/puppeteer-event-popper/deploy:latest
       with:
-        args:
-          - description.html
+        args: description.html
       env:
         EVENT_POPPER_API_KEY: ${{ secrets.EVENT_POPPER_API_KEY }}
         EVENT_POPPER_URL: ${{ secrets.EVENT_POPPER_URL }}
