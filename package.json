@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "http-server": "^0.11.1",
+    "tailwindcss": "^1.1.1",
+    "purgecss": "^1.4.0"
+  },
+  "scripts": {
+    "start": "http-server -c-1 .",
+    "build:css": "tailwind build source.css -o style.css"
+  }
+}
