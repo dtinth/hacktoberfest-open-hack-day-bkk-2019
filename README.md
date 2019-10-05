@@ -1,37 +1,11 @@
-Welcome to Glitch
-=================
+# hacktoberfest-open-hack-day-bkk-2019
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+Contains the Eventpop event description for the [Hacktoberfest BKK 2019](https://www.eventpop.me/e/7013) event.
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+## Development
 
-Find out more [about Glitch](https://glitch.com/about).
+To view, open `index.html` in your browser. No build tools needed.
 
+## Deployment
 
-Your Project
-------------
-
-### ← README.md
-
-That's this file, where you can tell people what your cool website does and how you built it.
-
-### ← index.html
-
-Where you'll write the content of your website. 
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-Made by [Glitch](https://glitch.com/)
--------------------
-
-\ ゜o゜)ノ
+Just push to GitHub. Once it’s in `master` branch it will be deployed to Eventpop automatically.
