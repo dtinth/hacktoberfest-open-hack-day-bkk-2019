@@ -9,19 +9,27 @@
       href="https://p-a.popcdn.net/assets/application-a74f8605e9e46bea47f09e697e864f9beb3f80fc32f41542d373790bd7027a17.css"
     />
     <link
-      class="added-css"
+      class="custom-css"
       href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
       rel="stylesheet"
     />
-    <style class="added-css">
+    <style class="custom-css">
       h2 {
         font-family: 'Space Mono', sans-serif;
+      }
+      .custom-description-container {
+        padding: 12px;
+        background: #152347;
+        color: white;
+      }
+      .custom-description-container h2 {
+        color: #fff922;
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body class="iframe-event-main-content">
-    <div id="custom-eventpop-description">
+    <div id="custom-eventpop-description" class="custom-description-container">
       <p>
         It's Hacktoberfest 2019 — let’s contribute to open-source projects!
         Hacktoberfest Open Hack Day Bangkok is an event where many communities
@@ -205,7 +213,7 @@
       })
       getEventpopDescription = () => {
         return [
-          ...document.querySelectorAll('.added-css'),
+          ...document.querySelectorAll('.custom-css'),
           document.querySelector('#custom-eventpop-description'),
         ]
           .map(x => x.outerHTML)
