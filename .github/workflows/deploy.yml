@@ -11,6 +11,7 @@ jobs:
     - uses: docker://dtinth/puppeteer-event-popper:latest
       with:
         args: description.html
+        entrypoint: node /usr/src/app/src/deploy.js
       env:
         EVENT_POPPER_API_KEY: ${{ secrets.EVENT_POPPER_API_KEY }}
         EVENT_POPPER_URL: ${{ secrets.EVENT_POPPER_URL }}
