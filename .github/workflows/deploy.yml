@@ -20,3 +20,5 @@ jobs:
         yarn deploy
       env:
         CI: true
+        EVENT_POPPER_API_KEY: ${{ secrets.EVENT_POPPER_API_KEY }}
+        EVENT_POPPER_URL: ${{ secrets.EVENT_POPPER_URL }}
