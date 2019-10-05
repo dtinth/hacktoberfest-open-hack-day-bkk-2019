@@ -8,6 +8,16 @@
       rel="stylesheet"
       href="https://p-a.popcdn.net/assets/application-a74f8605e9e46bea47f09e697e864f9beb3f80fc32f41542d373790bd7027a17.css"
     />
+    <link
+      class="added-css"
+      href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style class="added-css">
+      h2 {
+        font-family: 'Space Mono', sans-serif;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body class="iframe-event-main-content">
@@ -194,7 +204,12 @@
         },
       })
       getEventpopDescription = () => {
-        return document.querySelector('#custom-eventpop-description').outerHTML
+        return [
+          ...document.querySelectorAll('.added-css'),
+          document.querySelector('#custom-eventpop-description'),
+        ]
+          .map(x => x.outerHTML)
+          .join('')
       }
     </script>
   </body>
