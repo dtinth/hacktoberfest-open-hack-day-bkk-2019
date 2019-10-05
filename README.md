@@ -4,7 +4,7 @@ Contains the Eventpop event description for the [Hacktoberfest BKK 2019](https:/
 
 ## Development
 
-To view, open `index.html` in your browser. No build tools needed.
+To view, open `index.html` in your browser. No build tools needed. Edit the event description in `description.html`.
 
 ## Deployment
 

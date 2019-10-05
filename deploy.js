@@ -3,13 +3,13 @@ const axios = require('axios')
 
 async function render() {
   const browser = await puppeteer.launch({
-    args: ['--single-process']
+    args: ['--single-process'],
   })
   try {
     const page = await browser.newPage()
     await page.goto(`file://${__dirname}/description.html`)
     const value = await page.evaluate(
-      () => document.querySelector('#custom-eventpop-description').outerHTML
+      () => document.querySelector('#custom-eventpop-description').outerHTML,
     )
     return value
   } finally {
@@ -26,8 +26,8 @@ async function main() {
     `${process.env.EVENT_POPPER_URL}/.netlify/functions/updateEventDescription`,
     {
       apiKey: `${process.env.EVENT_POPPER_API_KEY}`,
-      description: html
-    }
+      description: html,
+    },
   )
   console.log('* Updating done!')
 }
