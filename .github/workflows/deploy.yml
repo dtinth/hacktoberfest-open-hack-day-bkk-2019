@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: docker://docker.pkg.github.com/dtinth/puppeteer-event-popper/deploy:latest
+    - uses: docker://dtinth/puppeteer-event-popper:latest
       with:
         args: description.html
       env:
