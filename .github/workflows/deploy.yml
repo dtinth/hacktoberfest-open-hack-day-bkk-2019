@@ -1,24 +1,17 @@
 name: Deploy event description to Eventpop
-
 on:
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Install Node
-      uses: actions/setup-node@v1
+    - uses: docker://docker.pkg.github.com/dtinth/puppeteer-event-popper/deploy:latest
       with:
-        node-version: v10.x
-    - name: Deploy 
-      run: |
-        yarn
-        yarn deploy
+        args:
+          - description.html
       env:
-        CI: true
         EVENT_POPPER_API_KEY: ${{ secrets.EVENT_POPPER_API_KEY }}
         EVENT_POPPER_URL: ${{ secrets.EVENT_POPPER_URL }}
