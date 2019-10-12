@@ -25,8 +25,7 @@
                   <div id="event-main-content">
                     <iframe
                       width="100%"
-                      height="3000"
-                      src="description.html"
+                      height="7000"
                       scrolling="no"
                       sandbox="allow-scripts allow-popups allow-forms allow-popups-to-escape-sandbox"
                     ></iframe>
@@ -38,5 +37,8 @@
         </div>
       </div>
     </div>
+    <script>
+      document.querySelector('iframe').src = 'description.html?t=' + Date.now()
+    </script>
   </body>
 </html>
