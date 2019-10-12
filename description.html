@@ -15,7 +15,7 @@
     />
     <style class="custom-css">
       .custom-description-container {
-        padding: 12px;
+        padding: 16px;
         background: #152347;
         color: #99a1b3;
         font-family: 'Space Mono', sans-serif;
@@ -38,6 +38,76 @@
       }
       .custom-description-container a {
         color: #fff922;
+      }
+      
+      .custom-schedule {
+        display: block;
+        margin: 0;
+        padding: 1px;
+        background: #fff3;
+      }
+      .custom-schedule__row {
+        list-style: none;
+        background: #152347;
+      }
+      * + .custom-schedule__row {
+        margin-top: 1px;
+      }
+      .custom-schedule__row > h3 {
+        font: inherit;
+        margin: 0;
+        padding: 8px;
+        text-align: center;
+        font-weight: bold;
+        color: #fff;
+      }
+      .custom-schedule__track {
+        padding: 8px;
+      }
+      .custom-schedule__track > p,
+      .custom-schedule__track > ul {
+        margin: 0;
+      }
+      .custom-schedule__track > * + p,
+      .custom-schedule__track > * + ul {
+        margin-top: 12px;
+      }
+      .custom-schedule__track > h4 {
+        margin: 0;
+        font: inherit;
+        color: #fff;
+      }
+      .custom-schedule__details {
+        font-size: 85%;
+      }
+      .custom-schedule__track.-agenda {
+        text-align: center;
+      }
+      @media (min-width: 720px) {
+        .custom-schedule__row {
+          display: flex;
+          align-items: baseline;
+        }
+        .custom-schedule__row > h3 {
+          width: 15%;
+        }
+        .custom-schedule__track {
+          width: 40%;
+        }
+        .custom-schedule__track > ul {
+        }
+        .custom-schedule__track.-both {
+          width: 85%;
+        }
+        .custom-schedule__track.-hack {
+          width: 35%;
+        }
+        .custom-schedule__track.-sharing {
+          width: 50%;
+        }
+        .custom-schedule__track.-agenda {
+          text-align: left;
+        }
       }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -114,37 +184,7 @@
       </ul>
 
       <h2>
-        CONTENTS
-      </h2>
-      <p>
-        Here are some of the contents we are excited to share in this event
-        (subject to change):
-      </p>
-      <ul>
-        <li>
-          For beginners, Thai will be talking about “Low hanging fruits — easy
-          ways to make your first contribution and make open-source world a
-          better place.”
-        </li>
-        <li>
-          For blockchain enthusiasts, Katinrun and KULAP are coming up with a
-          workshop about Libra.
-        </li>
-        <li>
-          For developers who are interested in giving a talk at
-          meetups/conferences but still feel unconfident, Georgi from Python
-          Thailand will be presenting about “Presenting in English when you’re
-          not a native speaker.”
-        </li>
-        <li>
-          For open-source project maintainers, Thai will be sharing about
-          “Puzzle-driven-development” and how his open-source project received
-          15 PRs overnight.
-        </li>
-      </ul>
-
-      <h2>
-        TRACKS
+        SCHEDULE
       </h2>
       <p>
         This event will be run in 2 simultaneous tracks.
@@ -154,6 +194,79 @@
         <li>
           Sharing track — Learn and share with our sessions, workshops, and
           lightning talks.
+        </li>
+      </ul>
+      <ul class="custom-schedule">
+        <li class="custom-schedule__row">
+          <h3>10:00</h3>
+          <div class="custom-schedule__track -both -agenda">
+            <p>Registration</p>
+          </div>
+        </li>
+        <li class="custom-schedule__row">
+          <h3>10:30</h3>
+          <div class="custom-schedule__track -both">
+            <p>Opening sessions</p>
+            <ul>
+              <li>Introduction to Hacktoberfest</li>
+              <li>How to start contributing</li>
+              <li>Community projects showcase</li>
+            </ul>
+          </div>
+        </li>
+        <li class="custom-schedule__row">
+          <h3>11:30</h3>
+          <div class="custom-schedule__track -hack">
+            <h4>Hack track:</h4>
+            <p>Begin hacking</p>
+            <p>Work on open-source projects and submit pull requests.</p>
+            <p class="custom-schedule__details">
+              <em>New to this?
+              We have mentors to help you get your first contribution rolling!</em>
+            </p>
+          </div>
+          <div class="custom-schedule__track -sharing">
+            <h4>Sharing track:</h4>
+            <ul>
+              <li>“Angular and its open sources tools” — Jame from Angular Developers Thailand</li>
+              <li>“Why I love Ruby” [EN] — Tino from Bangkok.rb</li>
+              <li>“Using Puzzle-Driven-Development to make your project more beginner friendly” [EN] — Thai from Taskworld</li>
+              <li>“Centering things in CSS” — Jun from ThoughtWorks</li>
+            </ul>
+          </div>
+        </li>
+        <li class="custom-schedule__row">
+          <h3>12:30</h3>
+          <div class="custom-schedule__track -both -agenda">
+            <p>Lunchtime!</p>
+          </div>
+        </li>
+        <li class="custom-schedule__row">
+          <h3>13:30</h3>
+          <div class="custom-schedule__track -hack">
+            <h4>Hack track:</h4>
+            <p>Continue hacking</p>
+          </div>
+          <div class="custom-schedule__track -sharing">
+            <h4>Sharing track:</h4>
+            <ul>
+              <li>“Build DApps on Libra Blockchain” [TH] — KULAP</li>
+              <li>“How to give a talk in English as a non-native speaker” [EN] — Georgi from Python Thailand</li>
+              <li><em>Lightning talks</em></li>
+            </ul>
+          </div>
+        </li>
+        <li class="custom-schedule__row">
+          <h3>17:30</h3>
+          <div class="custom-schedule__track -both -agenda">
+            <p>Closing</p>
+          </div>
+        </li>
+        <li class="custom-schedule__row">
+          <h3>18:00</h3>
+          <div class="custom-schedule__track -both -agenda">
+            <p>After-party</p>
+          </div>
         </li>
       </ul>
 
